@@ -1,8 +1,23 @@
+import "reflect-metadata"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'index.css';
+import { App } from 'App';
 import reportWebVitals from './reportWebVitals';
+import { configure } from 'mobx'
+
+configure({
+  enforceActions: 'always', // don't allow state modifications outside actions
+  computedRequiresReaction: true,
+  reactionRequiresObservable: true,
+  observableRequiresReaction: true,
+  disableErrorBoundaries: false,
+})
+
+if (process.env.NODE_ENV === 'development') {
+  const { msw } = require('./test-utils/mocks/msw')
+  msw.start()
+}
 
 ReactDOM.render(
   <React.StrictMode>
