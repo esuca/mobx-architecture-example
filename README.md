@@ -1,0 +1,1 @@
+# mobx-architecture-example
