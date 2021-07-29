@@ -1,3 +1,5 @@
+You can read more about the architecture reading the [MobX Architecture in Production article](https://esuca.hashnode.dev/mobx-architecture-in-production)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
